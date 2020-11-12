@@ -21,8 +21,8 @@ export const EditQuestion = () => {
         onSubmit={async () => {
           try {
             const updated = await updateQuestionMutation({
-              where: { id: question.id },
-              data: { name: "MyNewName" },
+              where: {id: question.id},
+              data: {text: "Do you really love Blitz?"},
             })
             await mutate(updated)
             alert("Success!" + JSON.stringify(updated))
